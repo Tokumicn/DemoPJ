@@ -8,6 +8,10 @@ import (
 )
 
 func main() {
+	DownloadProcessBar()
+}
+
+func DownloadProcessBar() {
 	req, _ := http.NewRequest("GET", "https://dl.google.com/go/go1.14.2.src.tar.gz", nil)
 	resp, _ := http.DefaultClient.Do(req)
 	defer resp.Body.Close()
